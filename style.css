@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.page1{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    white-space: nowrap;
+    overflow: auto;
+}
+.page1::-webkit-scrollbar{
+    display: none;
+}
+.slide{
+    height: 100vh;
+    width: 100%;
+    display: inline-block;
+    padding-top: 20vh;
+    padding-left: 10vmax;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+nav{
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* background-color: lightcoral; */
+    list-style: none;
+    padding: 0.5vmax 5vmax;
+    
+}
+nav >ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;    
+
+}
+nav >ul >h1{
+    user-select: none;
+    font-size: 3vmax;
+    font-family: 'Caveat', cursive;
+    color: yellow;
+    font-weight: 900;
+}
+.filler{
+    /* background-color: wheat; */
+    height: 2vh;
+    width: 40%;
+}
+nav >ul li{
+    user-select: none;
+    font-family: cursive;
+    /* background-color: linen; */
+    padding: 0.1vmax 0.5vmax;
+    border-bottom: 0.2vmax solid transparent;
+    transition: all linear 0.2s;
+    border-radius: 0.5vmax;
+    color: yellow;
+}
+nav >ul li:hover{
+    border-bottom: 0.2vmax solid rgba(255, 255, 0, 0.702);
+    cursor: pointer;
+}
+
+.left{
+    height: 90vh;
+    width: 10%;
+    /* background-color:orange; */
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    user-select: none;
+
+}
+.right{
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    height: 90vh;
+    width: 10%;
+    /* background-color: red; */
+    user-select: none;
+
+}
+.slide1{
+    background-image: url(https://i.pinimg.com/564x/9b/7e/b6/9b7eb6d125c36de5587abf25fc1d3bb0.jpg);
+}
+
+.slide2{
+    background-image: url(https://i.pinimg.com/564x/5f/1b/80/5f1b804b4f6f2917d2aa4e6224192f5f.jpg);
+}
+.slide3{
+    background-image: url(https://i.pinimg.com/564x/f0/df/ab/f0dfab9e6f7899f28c96c21a062ec8f4.jpg);
+}
+.slide1-details,.slide2-details,.slide3-details{
+    backdrop-filter: blur(0.2vmax);
+    height: 80vh;
+    width: 90%;
+    user-select: none;
+    /* background-color: aqua; */
+    display: flex;
+}
+.slide1-details-left,.slide2-details-left,.slide3-details-left{
+    height: 70vh;
+    width: 60%;
+    /* background-color: lightseagreen; */
+}
+.slide1-details-left >h1,.slide2-details-left >h1,.slide3-details-left >h1{
+    font-size: 3.5vmax;
+    padding-top: 2vh;
+    padding-left: 2vmax;
+}
+.slide1-details-left >h1{
+    color: rgb(254,224,19);   
+    text-shadow: 0.2vmax 0.2vmax 0.5vmax rgba(254, 223, 19, 0.587);
+}
+.slide2-details-left >h1{
+    color: rgb(246,170,69);
+    text-shadow: 0.2vmax 0.2vmax 0.5vmax rgba(246, 169, 69, 0.725);
+}
+.slide3-details-left >h1{
+    color: rgb(158,200,81);
+    text-shadow: 0.2vmax 0.2vmax 0.5vmax rgba(158, 200, 81, 0.725);
+}
+.slide1-details-left >p,.slide2-details-left >p,.slide3-details-left >p{
+    /* background-color: yellow; */
+    width: 100%;
+    padding: 3vmax 0;
+    line-height: 1.8vmax;
+    padding-left: 2vmax;
+    font-size: 1.8vmax;
+    font-family: cursive;
+    color: rgba(245, 245, 245, 0.744);
+}
+
+.slide1-details-left >button,.slide2-details-left >button,.slide3-details-left >button{
+    padding: 0.8vmax 1.5vmax;
+    margin-left: 2vmax;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5vmax;
+}
+.slide1-details-left >button:active,.slide2-details-left >button:active,.slide3-details-left >button:active{
+    scale: 0.9;
+    cursor: grabbing;
+}
+.slide1-details-left >button{
+    background-color: transparent;
+    color: rgb(254,224,19);
+    box-shadow: 0 0 0.5vmax rgb(254,224,19);
+    cursor: grab;
+}
+.slide2-details-left >button{
+    background-color: transparent;
+    color: rgb(236,158,66);
+    box-shadow: 0 0 0.5vmax rgb(236,158,66);
+    cursor: grab;
+}
+.slide3-details-left >button{
+    background-color: transparent;
+    color: rgb(158,200,81);
+    box-shadow: 0 0 0.5vmax rgb(158,200,81);
+    cursor: grab;
+}
+.slide1-details-right,.slide2-details-right,.slide3-details-right{
+    height: 70vh;
+    width: 40%;
+    /* background-color: dimgray; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide1-details-right{
+    background-image: url(./mango\ img.png);
+    background-size: 120%;
+}
+.slide2-details-right{
+    background-image: url(./orange\ image.png);
+}
+.slide3-details-right{
+    background-image: url(./apple\ image.png);
+}
